@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link rel="icon" href="./image/favicon.ico" />
+    <meta name="theme-color" content="#f0f0f0" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Weather today</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyASbezIEgeMetPus8K4Mb47KJ6XtRjn4v4",
+    authDomain: "weather-app-20215.firebaseapp.com",
+    projectId: "weather-app-20215",
+    storageBucket: "weather-app-20215.appspot.com",
+    messagingSenderId: "248551028242",
+    appId: "1:248551028242:web:02e834962afe75eadd4acb",
+    measurementId: "G-FBQTE8EXLF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <p class="title">Weather today </p>
+    <div>
+        <form id="form" >
+            <input type="text" name="city" class="input" placeholder="Enter the city name" />
+            <button type="button" id="button" onclick="getcity()"><img src="./image/loupe.png" /></button>
+        </form>
+    </div>
+    <div class="main-wea">
+        <p id="city" class="item-main" ></p>
+        <img class="sky-img"  id="sky-img" />
+        <p  class="item-main-temp" id="temperature" ></p>
+        <p  class="item-main" id="sky" ></p>
+    </div>
+    <div class="main-wea-second">
+        <p class="item-second-tile">Current information:</p>
+        <p id="humidi" class="second-item" ></p>
+        <p id="pressure" class="second-item" ></p>
+        <p id="visi" class="second-item" ></p>
+        <p id="wind" class="second-item" ></p>
+    </div>
+    <!-- <div class="main-wea-third">
+        <div class="for-tom">
+        <p id="day" class="day" ></p>
+        <p id="forecast-tom" class="forecast-tom" ></p>
+        <img id="sky-tom" />
+    </div>
+    <div class="for-tom">
+        <p id="day-af" class="day" ></p>
+    <p id="forecast-aftom" class="forecast-tom" ></p>
+    <img id="sky-tom-af" />
+</div>
+<div class="for-tom">
+    <p id="day-af-two" class="day" ></p>
+<p id="forecast-aftom-two" class="forecast-tom" ></p>
+<img id="sky-tom-aftwo" />
+</div> -->
+<div class="fore-global">
+    <p class="item-second-tile" >Forecast information:</p>
+     <div class="fore">
+         <div>
+            <p id="day" class="day" ></p>
+            <p id="day-af" class="day" ></p>
+            <p id="day-af-two" class="day" ></p>
+         </div>
+         <div>
+             <div class="temp-ico">
+            <p id="forecast-tom" class="forecast-tom" ></p>
+            <img id="sky-tom" />
+            </div>
+            <div class="temp-ico">
+            <p id="forecast-aftom" class="forecast-tom" ></p>
+            <img id="sky-tom-af" />
+          </div>
+          <div class="temp-ico">
+         <p id="forecast-aftom-two" class="forecast-tom" ></p>
+         <img id="sky-tom-aftwo" />
+        </div>
+         </div>
+     </div>
+        <p id="forecast-aftom" ></p>
+    </div>
+</div>
+    <div class="main-wea-third-sun">
+        <div>
+        <p class="day">sunrise:</p>
+        <p class="day">sunset:</p>
+    </div>
+    <div class="time">
+        <p id="rise"></p>
+        <p id="set"></p>
+    </div>
+    </div>
+    <div class="share">
+        <div class="link" ><a href="https://abdrahmanbadou-14cc8.web.app/" target="_blank"><img src="./image/global.png" /></a></div>
+        <div class="link"><a href="https://github.com/abdrahman04" target="_blank"><img src="./image/github.png" /></a></div>
+        <div class="link"><a href="https://www.instagram.com/abdrahmanbadou/" target="_blank"><img src="./image/instagram.png" /></a></div>
+    </div>
+    <footer class="footer">
+        <p>&copy; Abdrahman Badou</p>
+        <p>Information provided by OpenWeather</p>
+    </footer>
+
+    <script src='main.js'></script>
+</body>
+</html>

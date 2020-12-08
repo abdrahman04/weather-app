@@ -1,0 +1,224 @@
+/********************************************
+font-family: 'Merriweather', serif;
+font-family: 'Roboto', sans-serif;
+***************************************/
+
+body {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.title {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.sky-img{
+    width: 90px;
+    margin: 0px;
+}
+
+.item-main-temp {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.main-wea {
+    background-color: white;
+    border: 1px;
+    margin-inline: 40%;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.item-main {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+}
+.main-wea-second {
+    background-color: white;
+    border: 1px;
+    margin-inline: 40%;
+    border-radius: 2rem;
+    /* align-items: center;
+    justify-content: center;
+    text-align: center;  */
+     padding: 20px;
+    margin-bottom: 10px; 
+} 
+
+.item-second-tile {
+    font-weight: 600;
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.second-item {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+}
+
+.main-wea-third {
+    background-color: white;
+    border: 1px;
+    margin-inline: 40%;
+    border-radius: 2rem;
+    /* align-items: center;
+    justify-content: center;
+    text-align: center;  */
+     padding: 20px;
+    margin-bottom: 10px; 
+}
+.for-tom {
+    display: flex;
+}
+
+.forecast-tom {
+    margin-left: 60%;
+}
+.fore{
+    display: flex;
+}
+
+.day {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 30px;
+}
+
+.temp-ico {
+    display: flex;
+    margin-left: 30%;
+}
+
+.main-wea-third-sun {
+    display: flex;
+    background-color: white;
+    border: 1px;
+    margin-inline: 40%;
+    border-radius: 2rem;
+    /* align-items: center;
+    justify-content: center;
+    text-align: center;  */
+     padding: 20px;
+    margin-bottom: 10px; 
+}
+
+.time {
+    margin-left: 65%;
+}
+
+.input {
+    outline: none;
+    border-radius: 2rem;
+    border: none;
+    padding: 10px;
+    background-color: rgb(223, 223, 223);
+    width: 70%;
+    margin-bottom:15px ;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid  #858585;
+    border-radius: 2rem;
+    border-color: #858585;
+}
+
+#button {
+    text-decoration: none;
+    color: #fff;
+    background-color:  #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-radius: 2rem;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+.fore-global {
+    background-color: white;
+    border: 1px;
+    margin-inline: 39%;
+    border-radius: 2rem;
+    /* align-items: center;
+    justify-content: center;
+    text-align: center;  */
+     padding: 20px;
+    margin-bottom: 10px; 
+}
+.share {
+    display: flex;
+    margin-inline-start: 45%;
+}
+.link {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: rgb(116, 116, 116);
+}
+
+
+@media screen and (max-width: 600px) {
+    .main-wea {
+        background-color: white;
+        border: 1px;
+        margin-inline: 5%;
+        border-radius: 2rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .main-wea-second {
+        background-color: white;
+        border: 1px;
+        margin-inline: 5%;
+        border-radius: 2rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+         padding: 20px;
+        margin-bottom: 10px; 
+    } 
+    .fore {
+        display: flex;
+    }
+    .main-wea-third-sun {
+        background-color: white;
+        border: 1px;
+        margin-inline: 5%;
+        border-radius: 2rem;
+        /* align-items: center;
+        justify-content: center;
+        text-align: center;  */
+         padding: 20px;
+        margin-bottom: 10px; 
+    }
+    .fore-global {
+        background-color: white;
+        border: 1px;
+        margin-inline: 5%;
+        border-radius: 2rem;
+        /* align-items: center;
+        justify-content: center;
+        text-align: center;  */
+         padding: 20px;
+        margin-bottom: 10px; 
+    }
+    .share {
+        display: flex;
+        margin-inline-start: 33%;
+    }
+    
+  }
