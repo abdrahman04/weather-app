@@ -168,6 +168,24 @@ body {
     font-size: 12px;
     color: rgb(116, 116, 116);
 }
+.forecast-hours {
+    overflow: auto;
+    white-space: nowrap;
+}
+.element-fore {
+    display: inline-block;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.global-foreHours{
+    padding: 20px;
+    margin-bottom: 10px; 
+    background-color: white;
+    border: 1px;
+    margin-inline: 39%;
+    border-radius: 2rem;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -219,6 +237,18 @@ body {
     .share {
         display: flex;
         margin-inline-start: 33%;
+    }
+    .forecast-hours {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .global-foreHours{
+        padding: 20px;
+        margin-bottom: 10px; 
+        background-color: white;
+        border: 1px;
+        margin-inline: 5%;
+        border-radius: 2rem;
     }
     
   }
