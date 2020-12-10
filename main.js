@@ -138,7 +138,7 @@ function getLocation() {
 
            if(day >= 4){
             document.getElementById("day-af-two").innerHTML= days[day-4]+":";
-            document.getElementById("forecast-aftom").innerHTML= data.list[23].main.temp+"°C";
+            document.getElementById("forecast-aftom-two").innerHTML= data.list[23].main.temp+"°C";
             var skyTom = document.getElementById("sky-tom-aftwo");
             var icon = data.list[23].weather[0].icon;
             skyTom.src =  "http://openweathermap.org/img/wn/"+icon+".png";
