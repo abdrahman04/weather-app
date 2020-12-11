@@ -15,35 +15,6 @@ function getLocation() {
       
     var imgSky = document.getElementById("sky-img");
     imgSky.src = "http://openweathermap.org/img/wn/"+icon+".png";
-    // var typeday;
-    // var hr = (new Date()).getHours(); 
-    // if(hr > 6 && hr < 19 ){
-    //     typeday = "day";
-    // }else {
-    //     typeday = "night";
-    // }
-//     if(descsky == "clear sky" && typeday == "day"){
-//         imgSky.src ="http://openweathermap.org/img/wn/01d.png";
-//     }else if (descsky == "clear sky" && typeday == "night"){
-//         imgSky.src ="http://openweathermap.org/img/wn/01n.png";
-//     }else if (descsky == "few clouds" && typeday == "day"){
-//         imgSky.src ="http://openweathermap.org/img/wn/02d.png";
-//     }else if (descsky == "few clouds" && typeday == "night"){
-//         imgSky.src ="http://openweathermap.org/img/wn/02n.png";
-//     }else if (descsky == "scattered clouds" && typeday == "day"){
-//         imgSky.src ="http://openweathermap.org/img/wn/03d.png";
-//     }else if (descsky == "scattered clouds" && typeday == "night"){
-//         imgSky.src ="http://openweathermap.org/img/wn/03n.png";
-//     }else if (descsky == "broken clouds" && typeday == "day"){
-//         imgSky.src ="http://openweathermap.org/img/wn/04d.png";
-//     }else if (descsky == "broken clouds" && typeday == "night"){
-//         imgSky.src ="http://openweathermap.org/img/wn/04n.png";
-//     }else if (descsky == "shower rain" && typeday == "day"){
-//         imgSky.src ="http://openweathermap.org/img/wn/09d.png";
-//     }else if (descsky == "shower rain" && typeday == "night"){
-//         imgSky.src ="http://openweathermap.org/img/wn/09n.png";
-//     }
-
   }
   
   
@@ -95,64 +66,39 @@ function getLocation() {
             return response.json()
         }).then (data => {
             console.log(data)
-            const day = new Date().getDay();
-            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            // console.log(day)
-            // console.log(days[day+1])
-            // console.log("temp: "+days[day+1]+" "+data.list[7].main.temp)
-            // document.getElementById("day").innerHTML= days[day+1]+":";
-            // document.getElementById("forecast-tom").innerHTML= data.list[7].main.temp+" °C";
-            // var skyTom = document.getElementById("sky-tom");
-            // var icon = data.list[7].weather[0].icon
-            // console.log(icon);
-            // skyTom.src =  "http://openweathermap.org/img/wn/"+icon+".png";
-            // document.getElementById("day-af").innerHTML= days[day+2]
-            
-            if(day <= 5){
-               document.getElementById("day").innerHTML= days[day+1]+":";
-               document.getElementById("forecast-tom").innerHTML= data.list[7].main.temp+"°C";
+        const today = new Date()
+        const tomorrow = new Date(today)
+        tomorrow.setDate(tomorrow.getDate() + 1)
+        // console.log(tomorrow)          
+        var tomStr = ""+tomorrow+"";
+        var sptTom = tomStr.split(" ");
+        // console.log(sptTom[0]);
+        document.getElementById("day").innerHTML= sptTom[0]+" :";
+                document.getElementById("forecast-tom").innerHTML= data.list[7].main.temp+"°C";
                var skyTom = document.getElementById("sky-tom");
                var icon = data.list[7].weather[0].icon;
                skyTom.src =  "http://openweathermap.org/img/wn/"+icon+".png";
-            }else if(day == 6) {
-              document.getElementById("day").innerHTML= days[day-6]+":";
-              document.getElementById("forecast-tom").innerHTML= data.list[7].main.temp+"°C";
-              var skyTom = document.getElementById("sky-tom");
-              var icon = data.list[7].weather[0].icon;
-              skyTom.src =  "http://openweathermap.org/img/wn/"+icon+".png";
-            }
-            
-            if(day <= 4){
-              document.getElementById("day-af").innerHTML= days[day+2]+":";
+
+        const afTom = new Date(today);
+        afTom.setDate(afTom.getDate()+2)
+        var tomStraf = ""+afTom+"";
+        var sptTomaf = tomStraf.split(" ");
+        // console.log(sptTomaf[0])
+        document.getElementById("day-af").innerHTML= sptTomaf[0]+":";
               document.getElementById("forecast-aftom").innerHTML= data.list[15].main.temp+"°C";
               var skyTom = document.getElementById("sky-tom-af");
               var icon = data.list[15].weather[0].icon;
               skyTom.src =  "http://openweathermap.org/img/wn/"+icon+".png";
-           }else if(day >= 5) {
-             document.getElementById("day").innerHTML= days[day-5]+":";
-             document.getElementById("forecast-aftom").innerHTML= data.list[15].main.temp+"°C";
-              var skyTom = document.getElementById("sky-tom-af");
-              var icon = data.list[15].weather[0].icon;
-              skyTom.src =  "http://openweathermap.org/img/wn/"+icon+".png";
-           };
-
-           if(day >= 4){
-            document.getElementById("day-af-two").innerHTML= days[day-4]+":";
+        const afTomtwo = new Date(today);
+        afTomtwo.setDate(afTomtwo.getDate()+3)
+        var tomStraftwo = ""+afTomtwo+"";
+        var sptTomaftwo = tomStraftwo.split(" ");
+        // console.log(sptTomaftwo[0]);
+            document.getElementById("day-af-two").innerHTML= sptTomaftwo[0]+":";
             document.getElementById("forecast-aftom-two").innerHTML= data.list[23].main.temp+"°C";
             var skyTom = document.getElementById("sky-tom-aftwo");
             var icon = data.list[23].weather[0].icon;
             skyTom.src =  "http://openweathermap.org/img/wn/"+icon+".png";
-         }else if(day <= 3) {
-           document.getElementById("day-af-two").innerHTML= days[day+3]+":  "+"  ";
-           document.getElementById("forecast-aftom-two").innerHTML= data.list[23].main.temp+"°C";
-            var skyTom = document.getElementById("sky-tom-aftwo");
-            var icon = data.list[23].weather[0].icon;
-            skyTom.src =  "http://openweathermap.org/img/wn/"+icon+".png";
-         }
-
-
-
-
             })
         .catch(err => {
         	console.error(err);
