@@ -23,7 +23,7 @@ function getLocation() {
     var lat = position.coords.latitude;
     var long = position.coords.longitude;
     //*******************************************************************//
-    var key = '2de9a83d7b1bfcb3a2bd9fc6e82686eb';
+    var key = '*********************************';
     fetch('https://api.openweathermap.org/data/2.5/weather?lat=' +lat+'&lon='+long+ '&units=metric&appid=' + key)  
     .then(response => {
             // console.log(response)
@@ -59,7 +59,7 @@ function getLocation() {
     var long = position.coords.longitude;
     // console.log(lat, long)
     /*********************************************************************************** */
-    var key = '2de9a83d7b1bfcb3a2bd9fc6e82686eb';
+    var key = '*********************************';
     fetch('https://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&units=metric&appid='+key)  
     .then(response => {
             // console.log(response)
@@ -112,7 +112,7 @@ function getLocation() {
     var long = position.coords.longitude;
     // console.log(lat, long)
     /************************************************************************************* */
-    var key = '2de9a83d7b1bfcb3a2bd9fc6e82686eb';
+    var key = '*********************************';
     fetch('https://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&units=metric&appid='+key)  
     .then(response => {
             // console.log(response)
@@ -167,7 +167,7 @@ function getLocation() {
   var city = form.city.value;
   console.log(city);
       //*******************************************************************//
-      var key = '2de9a83d7b1bfcb3a2bd9fc6e82686eb';
+      var key = '*********************************';
       fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid=' + key)  
       .then(response => {
               // console.log(response)
